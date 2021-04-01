@@ -1,0 +1,20 @@
+
+.content {
+    color: green; /* Text color */
+    float: left;  
+    margin: 0px 5px 5px 5px;  
+    height: 220px;  
+    width: 320px;  
+    border: 5px solid black;  
+    background: white;  
+}  
+
+.sidebar {
+    color: black; /* Text color */
+    margin: 0px 8px 6px 8px;
+    float: right;
+    width: 190px;
+    height: 220px;
+    border: 5px solid black;
+    background: grey;
+}
