@@ -1,20 +1,21 @@
+/* Universal selector (all elements). */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Wrap document in a flex container. */
 .wrapper {
   display: flex;  
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
-  color: white;    
+  flex-flow: column wrap;
+  /* color: white;     */
 }
 
+/* Targets direct children of .wrapper (.section in this case) */
 .wrapper > * {
   padding: 10px;
-  flex: 1 100%;
+  /* flex: 1 100%; */
 }
 
 body {
@@ -22,37 +23,78 @@ body {
 }
 
 #page-title {
-  border-bottom: 1px solid black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  outline: 1px solid black;
+  min-height: 20%;
+  max-height: 55px;
+}
+
+/* Section flex container */
+.section {
+  color: black;
+  display: flex;
+  
+  /* padding: 0; */
+}
+.section .rt-img {
+  /* flex-wrap: wrap; */
+
+}
+
+.section .regular {
+  display: flex;
+  /* flex: 1;  */
+  /* Expand to fill page width */
+  border: 2px solid orange;
+  /* flex-wrap: nowrap; */
+  /* flex-direction: column;  */
 }
 
 .content {
   display: flex;
-  justify-content: flex-start;  /* hori align left */
-}
-
-.section {
-  color: black;
-  border: 1px solid black;
-  display: flex;
-  flex-wrap: wrap;
-}
-.section-content {
-  display: flex;
   flex-direction: column;
   flex: 1;
-  border: 1px solid black; 
-}
-.section-title {
-  border-bottom: 1px solid black;
-}
-.section-descr {
-  flex: 1;
+  outline: 1px solid black;
 }
 
-.section-img {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  border-bottom: 1px solid black;
-  
+.title {
+  font-weight: bold;
+  background-color: rgb(152, 215, 255);
+  text-align: left;
+  padding: 5px;
+  outline: 1px solid black;
+}
+
+.descr {
+  /* flex: 1; */
+  padding: 5px;
+  /* vertical-align: middle; */
+  /* align-items: center; */
+}
+
+.img {
+  /* padding: 0;
+  margin: 0; */
+  outline: 1px solid black;
+}
+
+/* Table Settings */
+.table {
+  margin: 0px auto; /* Horizontal center (L&R margins: auto) */
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+table {
+  margin: 10px;
+}
+th {
+  text-align: left;
 }
