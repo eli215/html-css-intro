@@ -9,13 +9,12 @@
 .wrapper {
   display: flex;  
   flex-flow: column wrap;
-  /* color: white;     */
 }
 
 /* Targets direct children of .wrapper */
 .wrapper > * {
   padding: 10px;
-  /* flex: 1 100%; */
+  flex: 1 100%;
 }
 
 body {
@@ -27,38 +26,31 @@ body {
   font-weight: bold;
   text-align: center;
   outline: 1px solid black;
-  min-height: 20%;
-  max-height: 55px;
+  height: 20%;
 }
 
 /* Section flex container */
 .section {
   color: black;
   display: flex;
-  /* padding: 0; */
 }
 
 /* Section subclasses */
 .section .rt-img {
-  /* flex-wrap: wrap; */
-  border: 2px solid orange;
+  display: flex;
 }
 
 .section .regular {
   display: flex;
-  /* flex: 1;  */
-  /* Expand to fill page width */
-  border: 2px solid orange;
-  /* flex-wrap: nowrap; */
-  /* flex-direction: column;  */
 }
 
 .section .content {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   flex: 1;
   outline: 1px solid black;
-  
+  background-color: rgb(192, 212, 238);
 }
 
 .section .title {
@@ -72,21 +64,17 @@ body {
 
 /* Section description */
 .section .descr {
-  /* flex: 1; */
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 5px;
-  /* vertical-align: middle; */
-  /* align-items: center; */
 }
+.section .descr li { padding-left: 20px; }
 
 /* Section image */
 .section .img {
-  /* padding: 0;
-  margin: 0; */
   outline: 1px solid black;
 }
 
-/* Table Settings */
+/*--------- Table Settings ---------*/
 .section .table {
   margin: 0px auto; /* Horizontal center (L&R margins: auto) */
 }
@@ -104,25 +92,33 @@ table {
 th {
   text-align: left;
 }
+/* Alternate row coloring */
 tr:nth-child(odd) {
-  background-color:rgb(183, 147, 255);
+  background-color:rgb(192, 160, 255);
 }
 tr:nth-child(even) {
   background-color: rgb(137, 192, 255);
 }
 
-/* Form Settings */
+/*--------- Form Settings ---------*/
 .section .form {
   display: grid;
   grid-template-columns: max-content max-content;
-  grid-gap: 5px;
+  grid-gap: 7px;
   padding: 6px;
 }
-.section .form label { text-align: right; }
+.section .form label { 
+  text-align: right;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 3px;
+}
 .section .form label:after { content: ":" }
-.section .form input[type=submit] { 
-  padding: 4px;
-  color: purple;
+
+/* Submit Button Settings */
+.section .btn input[type="submit"] { 
+  padding: 5px;
+  background-color: rgb(255, 176, 176);
+  margin: 4px 73px 10px;  /* manual alignment... */
+  font-size: medium;
   font-weight: bold;
-  width: auto;
 } 
