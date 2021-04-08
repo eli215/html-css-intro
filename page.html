@@ -25,9 +25,9 @@
         </div>
         <div class="descr">
         <p>
-            Hello! I am Eli, a senior Computer Science student at Central Washington University!
-            I transferred to CWU from YVC (Yakima Valley College) with my Associate's in fall 2019. 
-            I intend to graduate in spring 2021 with a B.S. in CS and a minor in Mathematics.
+            Hello! I am Eli, a Computer Science major at Central Washington University!
+            I transferred to CWU from YVC (Yakima Valley College) with my Associate's in Fall 2019. 
+            I intend to graduate this spring (2021) with a B.S. in CS and a minor in Mathematics.
         </p>
         </div>
     </div>
@@ -46,7 +46,6 @@
         </div>
         <div class="descr">
             <p>Here are a few of the courses I have completed at CWU:</p>
-            <br>
         </div>
         <div class="table">
             <table style="width:auto">
@@ -78,15 +77,40 @@
 <!-- </div> -->
 
 <div class="section regular">
-    <div class="section title"><h2>About</h2></div>
-    <div class="section content">
-
+    <div class="content">
+        <div class="title">
+            <h2>Interests</h2>
+        </div>
+        <div class="descr">
+            <p>Some things I enjoy are:
+                <li>listening to and playing music</li>
+                <li>gaming with friends</li>
+                <li>fitness</li>
+            </p>
+        </div>
     </div>
 </div>
 
-<div class="section">
-    <div class="section-title"><h2>About</h2></div>
-    <div class="section-content">
+<div class="section regular">
+    <div class="content">
+        <div class="title">
+            <h2>Submit Dog Info</h2>
+        </div>
+        <div class="descr">
+            <p>Submit some dog info below if you'd like!</p>
+        </div>
+        <form class="form" id="dogForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Ramona Growlers"/>
+
+            <label for="breed">Breed</label>
+            <input type="text" id="breed" name="breed" placeholder="Shih-Poo"/>
+
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age" placeholder="3"/>
+
+            <input type="submit" value="Submit" onClick="clearForm()">
+        </form>
 
     </div>
 </div>
@@ -94,3 +118,10 @@
 
 </body>
 </div>
+
+<!-- JavaScript function to clear form data -->
+<script>
+    function clearForm() {
+      document.getElementById("dogForm").reset();
+    }
+</script>

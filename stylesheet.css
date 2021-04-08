@@ -12,7 +12,7 @@
   /* color: white;     */
 }
 
-/* Targets direct children of .wrapper (.section in this case) */
+/* Targets direct children of .wrapper */
 .wrapper > * {
   padding: 10px;
   /* flex: 1 100%; */
@@ -23,7 +23,7 @@ body {
 }
 
 #page-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   text-align: center;
   outline: 1px solid black;
@@ -35,12 +35,13 @@ body {
 .section {
   color: black;
   display: flex;
-  
   /* padding: 0; */
 }
+
+/* Section subclasses */
 .section .rt-img {
   /* flex-wrap: wrap; */
-
+  border: 2px solid orange;
 }
 
 .section .regular {
@@ -52,36 +53,41 @@ body {
   /* flex-direction: column;  */
 }
 
-.content {
+.section .content {
   display: flex;
   flex-direction: column;
   flex: 1;
   outline: 1px solid black;
+  
 }
 
-.title {
+.section .title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
-  background-color: rgb(152, 215, 255);
+  background-color: rgb(137, 192, 255);
   text-align: left;
   padding: 5px;
   outline: 1px solid black;
 }
 
-.descr {
+/* Section description */
+.section .descr {
   /* flex: 1; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 5px;
   /* vertical-align: middle; */
   /* align-items: center; */
 }
 
-.img {
+/* Section image */
+.section .img {
   /* padding: 0;
   margin: 0; */
   outline: 1px solid black;
 }
 
 /* Table Settings */
-.table {
+.section .table {
   margin: 0px auto; /* Horizontal center (L&R margins: auto) */
 }
 
@@ -98,3 +104,25 @@ table {
 th {
   text-align: left;
 }
+tr:nth-child(odd) {
+  background-color:rgb(183, 147, 255);
+}
+tr:nth-child(even) {
+  background-color: rgb(137, 192, 255);
+}
+
+/* Form Settings */
+.section .form {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 5px;
+  padding: 6px;
+}
+.section .form label { text-align: right; }
+.section .form label:after { content: ":" }
+.section .form input[type=submit] { 
+  padding: 4px;
+  color: purple;
+  font-weight: bold;
+  width: auto;
+} 
